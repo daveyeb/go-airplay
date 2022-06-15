@@ -12,7 +12,7 @@ branches:
 install:
   - go get github.com/miekg/dns
   - go get github.com/gongo/text-parameters
-  - go get github.com/DHowett/go-plist
+  - go get howett.net/plist
   - go get github.com/mattn/goveralls
 
 script:
