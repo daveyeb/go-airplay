@@ -103,6 +103,8 @@ func (c *Client) Play(url string) <-chan error {
 func (c *Client) PlayAt(url string, position float64) <-chan error {
 	ch := make(chan error, 1)
 	body := fmt.Sprintf("Content-Location: %s\nStart-Position: %f\n", url, position)
+	
+	fmt.Println(body)
 
 	go func() {
 		if _, err := c.connection.post("play", strings.NewReader(body)); err != nil {
